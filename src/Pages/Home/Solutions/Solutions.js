@@ -12,9 +12,9 @@ const Solutions = () => {
         { id: 3, title: 'Automatic Sorting of Logistics Packages', description: 'The perfect choice for moving your business efficiently', img: photoTwo }
     ]
     return (
-        <div className='mx-24 mb-8'>
+        <div className='md:mx-24 mb-8'>
             <h1 className='text-3xl'>More Solutions</h1>
-            <div className='grid grid-cols-3 gap-12'>
+            <div className='grid md:grid-cols-3 gap-12'>
                 {
                     solutions.map(solution => <Solution
                         key={solution.id}
