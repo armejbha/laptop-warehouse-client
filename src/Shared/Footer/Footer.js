@@ -1,10 +1,9 @@
 import React from 'react';
-import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faLocationDot, faClock } from '@fortawesome/free-solid-svg-icons';
 const Footer = () => {
     return (
-        <div className=' bg-gray-600 py-24'>
+        <div className=' bg-gray-600 py-24 absulate bottom-0'>
             <div className=''>
                 <div className='md:mx-32 grid md:grid-cols-3'>
                     <div className=''>
