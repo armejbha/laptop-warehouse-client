@@ -12,13 +12,10 @@ const Header = () => {
         signOut(auth);
     }
     return (
-        <div className='sticky top-0 bg-red-300 w-full'>
-            <nav className='flex justify-between items-center md:mx-16'>
-                <div className='w-full py-2 flex items-center'>
-                    {/* <img className='w-2/12 h-12 md:w-1/12' src={icon} alt="" /> */}
-                    <div>
-                        <h1 className='text-2xl'><span className='text-4xl text-blue-600 mr-2'>Laptop</span>Warehouse</h1>
-                    </div>
+        <div className='sticky top-0 bg-red-200 w-full'>
+            <nav className='flex justify-between items-center md:mx-16 py-4'>
+                <div>
+                    <h1 className='text-4xl text-blue-600 mr-2'>Laptop Warehouse</h1>
                 </div>
                 <div onClick={() => setOpen(!open)} className='w-7 h-7 md:hidden'>
                     {open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>}

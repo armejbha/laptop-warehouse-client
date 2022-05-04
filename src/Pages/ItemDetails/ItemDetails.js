@@ -7,16 +7,20 @@ const ItemDetails = () => {
     const [item] = useItemsDetails(id);
     return (
         <div className='md:w-1/2 mx-auto my-8'>
-            <div className='grid md:grid-cols-2 border-2 rounded-lg p-4'>
+            <div className='grid md:grid-cols-2 border-2 rounded-lg p-4 mx-4 md:mx-o'>
                 <div>
                     <img className='h-full rounded-lg' src={item?.img} alt="" />
                 </div>
-                <div className='text-center'>
-                    <h3 className='font-extrabold text-xl'>{item?.name}</h3>
-                    <p className='font-extralight text-lg'>{item?.price}</p>
-                    <p>{item?.seller}</p>
-                    <p>{item?.quantity}</p>
-                    <p className='text-justify mx-4'>{item?.description}</p>
+                <div className=''>
+                    <h3 className='text-center text-xl font-bold'>{item?.name}</h3>
+                    <div className='mx-2'>
+                        <p className='text-xl font-semibold'>Suppler:{item?.supplierName}</p>
+                        <p className='text-justify text-gray-600'>{item?.description}</p>
+                        <div className='flex justify-between'>
+                            <p className='text-xl font-semibold'>Price:${item?.price}</p>
+                            <p className='text-xl font-semibold'>Quantity:{item?.quantity}</p>
+                        </div>
+                    </div>
                     <button className='bg-red-400 block rounded-lg text-white mx-auto py-2 px-8 mt-4'>Delivered</button>
                 </div>
             </div>
