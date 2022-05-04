@@ -1,18 +1,70 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React, { useRef } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import SocialMedia from '../SocialMedia/SocialMedia';
+import auth from '../../../firebase.init';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import Loading from '../../../Shared/Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
 const Login = () => {
+    const emailRef = useRef('');
+    let errorMessage;
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+    const location = useLocation();
+    const navigate = useNavigate();
+    let from = location.state?.from?.pathname || '/';
+
+
+    if (error) {
+        errorMessage = <p className='text-center text-red-800 mt-2'>Email address and password don't match</p>
+    }
+    if (loading || sending) {
+        return <Loading></Loading>
+    }
+    if (user) {
+        navigate(from, { replace: true });
+    }
+    const handleSubmit = event => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        signInWithEmailAndPassword(email, password);
+    }
+    const forgetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('send email');
+        }
+        else {
+            toast('please enter your email');
+        }
+    }
     return (
-        <div className='bg-cyan-700 h-screen pt-48 '>
+        <div className='bg-gradient-to-r from-cyan-800 to-cyan-500 h-screen pt-32 '>
             <div className='w-4/12 bg-white mx-auto rounded-lg py-16'>
                 <h2 className='text-center text-2xl mb-4'>Login</h2>
                 <div className='border-b-2 mb-4'></div>
-                <form className='w-8/12 mx-auto'>
-                    <input className='block w-full outline-0 bg-sky-100 text-bold py-1 px-4 rounded-full' type="email" name="email" id="" placeholder='Enter Email' />
+                <form onSubmit={handleSubmit} className='w-8/12 mx-auto'>
+                    <input className='block w-full outline-0 bg-sky-100 text-bold py-1 px-4 rounded-full'
+                        ref={emailRef} type="email" name="email" id="" placeholder='Enter Email' />
+
                     <input className='block w-full outline-0 bg-sky-100 text-bold py-1 px-4 rounded-full mt-2' type="text" name="password" id="" placeholder='Enter password' />
+
+                    <p className='ml-2 my-2'><Link to="/login" onClick={forgetPassword} className=''>Forget password?</Link></p>
+
                     <input className='block w-full outline-0 bg-red-400 text-white text-normal py-1 px-4 rounded-full mt-2' type="submit" value="Login" />
+                    {errorMessage}
                 </form>
-                <p className='text-center mt-4'>Don't have an Account?<Link className='text-sky-500' to='/register'>Register</Link></p>
+                <SocialMedia></SocialMedia>
+                <p className='text-center mt-4'>Don't have Account?<Link className='text-sky-500' to='/register'>Sign UP Now</Link></p>
+                <ToastContainer />
             </div>
         </div>
     );

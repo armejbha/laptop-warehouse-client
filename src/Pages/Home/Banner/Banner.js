@@ -1,18 +1,20 @@
 import React from 'react';
-import './Banner.css';
-
+import banner from '../../../images/Icon/laptopOne.png';
 const Banner = () => {
     return (
-        <div className='h-screen banner-img bg-cover flex items-center'>
-            <div className="mx-10 text-white w-full md:w-2/4">
-                <h1 className="text-5xl">We are made </h1>
-                <h1 className="text-yellow-400 text-5xl">for service</h1>
-                <p className="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                    tellus,
-                    luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                <button className="border-2 px-5 py-2 mt-10 text-xl">DISCOVER MORE</button>
-            </div>
-        </div>
+        <div className='bg-gradient-to-r from-cyan-800 to-white h-screen'>
+            <div div className='grid grid-cols-1 md:grid-cols-2 items-center gap-4 mx-4 md:mx-12 py-24' >
+                <div className=''>
+                    <h1 className='text-5xl md:text-6xl font-bold'>SPORTS CAR</h1>
+                    <h1 className='text-3xl font-bold text-blue-600 mt-2 md:mt-4'>BEST FOR SPEED</h1>
+                    <p className='py-4 text-gray-800'>We can simply say sports car is small low car with a high-powered engine and generally seats two people.Lamborgini Huracan is one of them.It's  a famous sports car for many people.Specialy celebrity mostly use this car.</p>
+                    <button className='bg-blue-200 text-blue-600 text-xl px-8 py-2 rounded-lg font-semibold '>SEE MORE</button>
+                </div>
+                <div className=''>
+                    <img src={banner} alt="" />
+                </div>
+            </div >
+        </div >
     );
 };
 
