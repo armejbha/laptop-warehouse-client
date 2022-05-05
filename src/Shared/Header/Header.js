@@ -24,6 +24,9 @@ const Header = () => {
                     <li className=''>
                         <Link className='md:mr-6 text-sm md:text-xl' to='/home'>Home</Link>
                     </li>
+                    <li className=''>
+                        <Link className='md:mr-6 text-sm md:text-xl' to='/blogs'>Blogs</Link>
+                    </li>
                     {
                         user &&
                         <>

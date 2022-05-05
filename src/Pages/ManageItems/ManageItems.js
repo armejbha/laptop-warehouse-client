@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useItems from '../../Hook/useItems';
 
 const ManageItems = () => {
     const [items, setItems] = useItems();
+    const navigate = useNavigate();
     const handleDelete = id => {
         const process = window.confirm('Are you want to delete it');
         if (process) {
@@ -18,9 +20,13 @@ const ManageItems = () => {
                 })
         }
     }
+    const navigateToAddItem = () => {
+        navigate('/addItem');
+    }
     return (
         <div className='mb-24 mx-12'>
             <h2 className='text-center my-4 text-2xl font-bold'>Manage Items</h2>
+            <button onClick={navigateToAddItem} className='bg-red-400 my-4 block mx-auto px-6 py-2 rounded-md text-xl font-bold'>Add Item</button>
             <table className='border border-slate-500 w-full'>
                 <thead>
                     <tr className=''>
