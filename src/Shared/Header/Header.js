@@ -20,7 +20,7 @@ const Header = () => {
                 <div onClick={() => setOpen(!open)} className='w-7 h-7 md:hidden'>
                     {open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>}
                 </div>
-                <ul className={`md:flex absolute md:static right-4 duration-75 ease-in shadow-lg md:shadow-none rounded-lg bg-stone-600 md:bg-transparent px-8 py-2 md:px-0 md:py-0 ${open ? 'top-8' : 'top-[-150px] md:top-0'}`}>
+                <ul className={`md:flex absolute md:static right-0 duration-75 ease-in shadow-lg md:shadow-none rounded-lg bg-stone-600 md:bg-transparent px-8 py-2 md:px-0 md:py-0 ${open ? 'top-16' : 'top-[-170px] md:top-0'}`}>
                     <li className=''>
                         <Link className='md:mr-6 text-sm md:text-xl' to='/home'>Home</Link>
                     </li>
