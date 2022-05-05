@@ -4,7 +4,7 @@ import SocialMedia from '../SocialMedia/SocialMedia';
 import auth from '../../../firebase.init';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import Loading from '../../../Shared/Loading/Loading';
-import { ToastContainer, toast } from 'react-toastify';
+import toast, { Toaster } from 'react-hot-toast';
 const Login = () => {
     const emailRef = useRef('');
     let errorMessage;
@@ -64,7 +64,7 @@ const Login = () => {
                 </form>
                 <SocialMedia></SocialMedia>
                 <p className='text-center mt-4'>Don't have Account?<Link className='text-sky-500' to='/register'>Sign UP Now</Link></p>
-                <ToastContainer />
+                <Toaster />
             </div>
         </div>
     );

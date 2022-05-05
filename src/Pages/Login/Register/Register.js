@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialMedia from '../SocialMedia/SocialMedia';
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import Loading from '../../../Shared/Loading/Loading';
 const Register = () => {
+    const [agree, setAgree] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
     let from = location.state?.from?.pathname || "/";
@@ -45,10 +46,10 @@ const Register = () => {
                     <input className='block w-full outline-0 bg-sky-100 text-bold py-1 px-4 rounded-full mt-2' type="email" name="email" id="" placeholder='Enter Email' required />
                     <input className='block w-full outline-0 bg-sky-100 text-bold py-1 px-4 rounded-full mt-2' type="text" name="password" id="" placeholder='Enter password' required />
                     <div className='my-2'>
-                        <input className='mr-2' type="checkbox" name="checkbox" id="checkbox" />
-                        <label htmlFor='checkbox'>Accept all Terms and Condition</label>
+                        <input onClick={() => setAgree(!agree)} className='mr-2' type="checkbox" name="checkbox" id="checkbox" />
+                        <label className={`${agree ? '' : 'text-red-600'}`} htmlFor='checkbox'>Accept all Terms and Condition</label>
                     </div>
-                    <input className='block w-full outline-0 bg-red-400 text-white text-normal py-1 px-4 rounded-full mt-2' type="submit" value="Sign Up" />
+                    <input className='block w-full outline-0 bg-red-800 text-white text-normal py-1 px-4 rounded-full mt-2' type="submit" value="Sign Up" disabled={!agree} />
                     {errorMessage}
                 </form>
                 <SocialMedia></SocialMedia>
