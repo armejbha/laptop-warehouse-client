@@ -9,7 +9,7 @@ const Inventory = () => {
     return (
         <div className='bg-slate-100'>
             <div className='md:mx-24 mx-4 py-8'>
-                <h2 className='text-center text-3xl mb-4' > Product Inventory</h2 >
+                <h2 className='text-center text-3xl font-bold mb-4' > Product Inventory</h2 >
                 <div className='grid md:grid-cols-3 gap-8'>
                     {
                         newItems.map(item => <Items

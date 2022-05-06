@@ -37,11 +37,11 @@ const Register = () => {
         navigate(from, { replace: true });
     }
     return (
-        <div className='bg-gradient-to-r from-cyan-800 to-cyan-500 h-screen  pt-24'>
-            <div className='w-4/12 bg-white mx-auto rounded-lg py-16'>
+        <div className='bg-gradient-to-r from-cyan-900 to-cyan-600 h-screen py-12 md:py-24'>
+            <div className='md:w-4/12 bg-white mx-2 md:mx-auto rounded-lg py-16'>
                 <h2 className='text-center text-2xl mb-4'>Sign Up</h2>
                 <div className='border-b-2 mb-4'></div>
-                <form onSubmit={handleSubmit} className='w-8/12 mx-auto'>
+                <form onSubmit={handleSubmit} className='md:w-8/12 mx-12 md:mx-auto'>
                     <input className='block w-full outline-0 bg-sky-100 text-bold py-1 px-4 rounded-full' type="text" name="name" id="" placeholder='Your Name' required />
                     <input className='block w-full outline-0 bg-sky-100 text-bold py-1 px-4 rounded-full mt-2' type="email" name="email" id="" placeholder='Enter Email' required />
                     <input className='block w-full outline-0 bg-sky-100 text-bold py-1 px-4 rounded-full mt-2' type="text" name="password" id="" placeholder='Enter password' required />

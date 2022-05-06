@@ -23,7 +23,7 @@ const Items = ({ item }) => {
                     </div>
                 </div>
             </div>
-            <button onClick={() => navigateToInventoryDetails(_id)} className='bg-red-400 block mx-auto py-2 px-8 rounded-lg text-white text-xl font-semibold my-4'>Update</button>
+            <button onClick={() => navigateToInventoryDetails(_id)} className='block mx-auto bg-red-400 text-lg py-1 px-4 text-white rounded-lg  my-4'>Update</button>
         </div>
     );
 };
