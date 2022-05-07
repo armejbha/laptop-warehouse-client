@@ -12,6 +12,7 @@ import ManageItems from './Pages/ManageItems/ManageItems';
 import MyItem from './Pages/MyItem/MyItem';
 import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
+import NotFound from './Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='/myItem' element={<MyItem></MyItem>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

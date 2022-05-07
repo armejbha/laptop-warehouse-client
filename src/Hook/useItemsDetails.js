@@ -8,6 +8,7 @@ const useItemsDetails = id => {
             .then(res => res.json())
             .then(data => setItem(data));
     }, [id])
+    console.log(item);
     return [item, setItem];
 
 }
