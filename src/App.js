@@ -9,7 +9,8 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ManageItems from './Pages/ManageItems/ManageItems';
-import MyItem from './Pages/MyItem/MyItem';
+import MyItems from './Pages/MyItems/MyItems';
+import MyItem from './Pages/MyItems/MyItems';
 import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
 import NotFound from './Shared/NotFound/NotFound';
@@ -29,7 +30,7 @@ function App() {
         }></Route>
         <Route path='/manageitems' element={<ManageItems></ManageItems>}></Route>
         <Route path='/additem' element={<AddItem></AddItem>}></Route>
-        <Route path='/myitem' element={<MyItem></MyItem>}></Route>
+        <Route path='/myitem' element={<MyItems></MyItems>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

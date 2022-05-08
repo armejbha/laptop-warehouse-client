@@ -1,10 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useItems from '../../Hook/useItems';
+import ManageItem from './ManageItem';
+import ManageItemMobile from './ManageItemMobile';
 
 const ManageItems = () => {
     const [items, setItems] = useItems();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const handleDelete = id => {
         const process = window.confirm('Are you want to delete it');
         if (process) {
@@ -20,47 +22,42 @@ const ManageItems = () => {
                 })
         }
     }
-    const navigateToAddItem = () => {
-        navigate('/addItem');
-    }
+    // const navigateToAddItem = () => {
+    //     navigate('/addItem');
+    // }
     return (
-        <div className='mb-24 mx-12'>
-            <h2 className='text-center my-4 text-2xl font-bold'>Manage Items</h2>
-            <button onClick={navigateToAddItem} className='bg-red-400 my-4 block mx-auto px-6 py-2 rounded-md text-xl font-bold'>Add Item</button>
-            <table className='border border-slate-500 w-full'>
-                <thead>
-                    <tr className=''>
-                        <th className='border-2 border-black'>Id</th>
-                        <th className='border-2 border-black'>Picture</th>
-                        <th className='border-2 border-black'>Name</th>
-                        <th className='border-2 border-black'>Supplier Name</th>
-                        <th className='border-2 border-black'>Description</th>
-                        <th className='border-2 border-black'>Price</th>
-                        <th className='border-2 border-black p-6'>Quantity</th>
-                        <th className='border-2 border-black'>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        items.map(item =>
-                            <tr className=''>
-                                <td className='border-2 border-black p-4'>{item._id}</td>
-                                <td className='border-2 border-black p-4 w-1/12'><img className='' src={item.img} alt="" /></td>
-                                <td className='border-2 border-black p-4'>{item.name}</td>
-                                <td className='border-2 border-black p-4'>{item.supplierName}</td>
-                                <td className='border-2 border-black p-4'>{item.description}</td>
-                                <td className='border-2 border-black p-4'>{item.price}</td>
-                                <td className='border-2 border-black p-4 text-center'>{item.quantity}</td>
-                                <td className='border-2 border-black p-4'>
-                                    <button onClick={() => handleDelete(item._id)} className='bg-red-400 px-4 py-1 rounded-md text-white'>Delete</button>
-                                </td>
-                            </tr>
-                        )
-                    }
-                </tbody>
-
-            </table>
-        </div >
+        <div>
+            <h1 className='text-4xl font-bold text-center m-16'>My Inventory Items : {items.length}</h1>
+            <Link className='bg-orange-400 block m-auto p-2 w-44 rounded-lg text-center font-bold mb-4' to='/additem'>Add Item</Link>
+            <div className='md:flex justify-center hidden'>
+                <table className='border-2 border-black border-solid m-4'>
+                    <thead>
+                        <tr>
+                            <th className='border-2 border-black border-solid p-4'>Id</th>
+                            <th className='border-2 border-black border-solid p-4'>Picture</th>
+                            <th className='border-2 border-black border-solid p-4'>Name</th>
+                            <th className='border-2 border-black border-solid p-4'>Description</th>
+                            <th className='border-2 border-black border-solid p-4'>Supplier Name</th>
+                            <th className='border-2 border-black border-solid p-4'>Quantity</th>
+                            <th className='border-2 border-black border-solid p-4'>Price</th>
+                            {/* <th className='border-2 border-black border-solid p-4'>Stock</th> */}
+                            <th className='border-2 border-black border-solid p-4'>Delete</th>
+                            <th className='border-2 border-black border-solid p-4'>Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            items?.map(item => <ManageItem key={item._id} item={item} handleDelete={handleDelete}></ManageItem>)
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+                {
+                    items?.map(item => <ManageItemMobile key={item._id} item={item} handleDelete={handleDelete}></ManageItemMobile>)
+                }
+            </div>
+        </div>
     );
 };
 
