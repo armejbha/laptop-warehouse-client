@@ -5,6 +5,8 @@ import auth from '../../../firebase.init';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import Loading from '../../../Shared/Loading/Loading';
 import toast, { Toaster } from 'react-hot-toast';
+import axios from 'axios';
+
 const Login = () => {
     const emailRef = useRef('');
     let errorMessage;
@@ -30,11 +32,13 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true });
     }
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        const { data } = await axios.post('http://localhost:5000/login', { email });
+        localStorage.setItem('accessToken', data.accessToken);
     }
     const forgetPassword = async () => {
         const email = emailRef.current.value;

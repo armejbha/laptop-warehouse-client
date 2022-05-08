@@ -1,26 +1,37 @@
 import React from 'react';
 import google from '../../../images/social/google.png';
-import github from '../../../images/social/github.png';
-import { useSignInWithGoogle, useSignInWithGithub } from 'react-firebase-hooks/auth';
+// import github from '../../../images/social/github.png';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../../../Shared/Loading/Loading';
+import axios from 'axios';
+
 const SocialMedia = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    const [signInWithGithub, userOne, loadingOne, errorOne] = useSignInWithGithub(auth);
+    // const [signInWithGithub, userOne, loadingOne, errorOne] = useSignInWithGithub(auth);
     const location = useLocation();
     const navigate = useNavigate();
     let from = location.state?.from?.pathname || "/";
     let errorMessage;
-    if (loading || loadingOne) {
+    if (loading) {
         return <Loading></Loading>
     }
-    if (error || errorOne) {
-        errorMessage = <p className='text-red-600 text-center'>Error{error?.message}{errorOne?.message}</p>
+    if (error) {
+        errorMessage = <p className='text-red-600 text-center'>Error{error?.message}</p>
     }
-    if (user || userOne) {
-        navigate(from, { replace: true });
+    async function userCollect() {
+        if (user) {
+            console.log(user);
+            const email = user?.user?.email;
+            console.log(email);
+            const { data } = await axios?.post('http://localhost:5000/login', { email });
+            console.log(data);
+            localStorage.setItem('accessToken', data.accessToken);
+            navigate(from, { replace: true });
+        }
     }
+    userCollect();
     return (
         <div className='mt-2'>
             {errorMessage}
@@ -35,7 +46,7 @@ const SocialMedia = () => {
                     </div>
 
                 </button>
-                <button
+                {/* <button
                     onClick={() => signInWithGithub()}
                     className='w-full bg-gray-700 py-2 px-3 rounded-sm'>
                     <div className='flex items-center w-1/2 mx-auto'>
@@ -43,7 +54,7 @@ const SocialMedia = () => {
                         <span className='pl-1 text-white'>Github</span>
                     </div>
 
-                </button>
+                </button> */}
             </div >
         </div >
     );

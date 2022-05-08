@@ -69,7 +69,7 @@ const ItemDetails = () => {
 
     const navigate = useNavigate();
     const goToManageItem = () => {
-        navigate('/manageItems')
+        navigate('/manageitems')
     }
 
     return (
