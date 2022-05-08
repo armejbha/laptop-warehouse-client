@@ -13,7 +13,7 @@ const MyItems = () => {
     const [inventorys, setInventorys] = useState([]);
     useEffect(() => {
         const email = user?.email;
-        const url = `http://localhost:5000/myitems?email=${email}`;
+        const url = `https://secure-thicket-21886.herokuapp.com/myitems?email=${email}`;
         //     try {
         //         fetch(url, {
         //             method: 'GET',

@@ -8,7 +8,7 @@ const AddItem = () => {
     const navigate = useNavigate();
     const [user] = useAuthState(auth);
     const onSubmit = data => {
-        const url = `http://localhost:5000/items`;
+        const url = `https://secure-thicket-21886.herokuapp.com/items`;
         fetch(url, {
             method: 'POST',
             headers: {

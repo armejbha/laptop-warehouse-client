@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const useItemsDetails = id => {
     const [item, setItem] = useState({});
-    const url = `http://localhost:5000/items/${id}`;
+    const url = `https://secure-thicket-21886.herokuapp.com/${id}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

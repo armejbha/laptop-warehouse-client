@@ -15,9 +15,9 @@ const Items = ({ item }) => {
             <div className=''>
                 <h3 className='text-center text-xl font-bold'>{name}</h3>
                 <div className='mx-2'>
-                    <p className='text-xl font-semibold'>Suppler:{supplierName}</p>
                     <p className='text-justify text-gray-600'>{description}</p>
-                    <div className='flex justify-around'>
+                    <p className='text-xl font-semibold'>Suppler:{supplierName}</p>
+                    <div className='flex justify-between'>
                         <p className='text-lg font-semibold'>Price:${price}</p>
                         <p className='text-lg font-semibold'>Quantity:{quantity}</p>
                     </div>

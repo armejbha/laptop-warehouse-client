@@ -6,19 +6,19 @@ const Footer = () => {
         <div className=' bg-sky-900 pb-12'>
             <div className='border-b border-gray-500'>
                 <div className='md:mx-32 grid md:grid-cols-3'>
-                    <div className='border-x border-gray-500 py-24'>
+                    <div className='border border-gray-500 py-24'>
                         <h3 className='text-3xl text-center'>Warehouse</h3>
                         <div className='text-center'>
                             <p>
                                 <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
-                                <span className='ml-4'>(+612) 2531 5600</span>
+                                <span className='ml-4'>+880170000000</span>
                             </p>
                             <p>
                                 <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-                                <span className='ml-4'>(+612) 2531 5600</span>
+                                <span className='ml-4'>warehouse@gamil.com</span>
                             </p>
                             <p>
-                                <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon><span className='ml-4'>(+612) 2531 5600</span>
+                                <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon><span className='ml-4'>mohakhali,dhaka,bangladesh</span>
                             </p>
                             <p>
                                 <FontAwesomeIcon icon={faClock}></FontAwesomeIcon><span className='ml-4'>(+612) 2531 5600</span>
@@ -42,19 +42,19 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='border-r border-gray-500 py-24'>
+                    <div className='border border-gray-500 py-24'>
                         <h3 className='text-3xl text-center'>Service Provide</h3>
                         <div className='text-center'>
                             <p>Contact us</p>
                             <p>Help and advice</p>
-                            <p>Shipping & Returns</p>
+                            <p>Update& Delivered</p>
                             <p>Terms and conditions</p>
                             <p>Refund Policy</p>
                         </div>
                     </div>
-                    <div className='border-r border-gray-500 py-24'>
+                    <div className='border border-gray-500 py-24'>
                         <h3 className='text-center text-3xl'>NEWSLETTER</h3>
-                        <p className='text-justify mx-4 mb-4'>Sign up for newsletter to receive special offers and exclusive news about Nuranium products</p>
+                        <p className='text-center mx-4 mb-4'>Sign up for newsletter to receive Update news about laptop warehouse.</p>
                         <div className='ml-12'>
                             <input className='w-5/6  text-center font-normal py-4 outline-0' type="email" name="" id="" placeholder='ENTER YOUR EMAIL' />
                             <button className='w-5/6 text-center py-4 mt-2 bg-red-400 font-semibold text-white'>SUBSCRIBE</button>

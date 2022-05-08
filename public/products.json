@@ -2,65 +2,65 @@
     {
         "name": "Mackbook",
         "supplierName": "James bond",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "description": "Mackbook is Apple company laptop.This laptop is so much expensive.Elite class people use this laptop.",
         "price": 1200,
         "quantity": 5,
-        "img": "https://ibb.co/W0yrZrQ"
+        "img": "https://i.ibb.co/1X5s42R/maxim-hopman-Hin-rzh-Od-Ws-unsplash-1.jpg"
     },
     {
         "name": "Dell XPS",
-        "supplierName": "James bond",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "supplierName": "Michael filip",
+        "description": "Dell XPS is model of dell bussiness class laptop.This model laptop is very good structure.",
         "price": 1420,
         "quantity": 6,
-        "img": "https://ibb.co/W0yrZrQ"
+        "img": "https://i.ibb.co/DKy5Lhj/matthew-fournier-5-NM32v14n6-M-unsplash.jpg"
     },
     {
         "name": "hp pavilion",
-        "supplierName": "James bond",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "supplierName": "Amber heard",
+        "description": "Hp pavilion laptop is very good.Generally which are rap user they use this laptop.",
         "price": 1220,
         "quantity": 8,
-        "img": "https://ibb.co/W0yrZrQ"
+        "img": "https://i.ibb.co/W0c3yYC/james-jeremy-beckers-tq-WIGez5-As-I-unsplash.jpg"
     },
     {
         "name": "Lenovo",
-        "supplierName": "James bond",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "supplierName": "Jonny deep",
+        "description": "Lenovo is chinesse laptop manufucter company.There laptop are simpliy but very good.All class people like this.",
         "price": 1320,
         "quantity": 9,
-        "img": "https://ibb.co/W0yrZrQ"
+        "img": "https://i.ibb.co/cYSTZ5r/buhai-alexandru-constantin-ZUk-RPH3j0-Cs-unsplash.jpg"
     },
     {
         "name": "Acer Aspire",
-        "supplierName": "James bond",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "supplierName": "Abdul kalam",
+        "description": "Acer laptop very good for rap user.It build quality very good.This catagory laptop value for money.",
         "price": 1110,
         "quantity": 12,
-        "img": "https://ibb.co/W0yrZrQ"
+        "img": "https://i.ibb.co/dPHtnMx/anete-lusina-zws-Hjak-E-i-I-unsplash.jpg"
     },
     {
         "name": "MSI Modern",
-        "supplierName": "James bond",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "supplierName": "Hashem mia",
+        "description": "Msi company famous for computer hardware.Msi this model laptop is awesome.It look gorgeous.",
         "price": 1220,
         "quantity": 15,
-        "img": "https://ibb.co/W0yrZrQ"
+        "img": "https://i.ibb.co/f1FK64m/vadim-artyukhin-7y-Ir-Wv-Qq-Fc-unsplash.jpg"
     },
     {
-        "name": "Acer Aspire",
-        "supplierName": "James bond",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "name": "lenovo Thinkbook",
+        "supplierName": "Kalam Dealer",
+        "description": "Lenovo Thinkbook is business class laptop of lenovo.This catagory laptop review from user good.",
         "price": 1110,
         "quantity": 12,
-        "img": "https://ibb.co/W0yrZrQ"
+        "img": "https://i.ibb.co/cY6LXym/lenovo-C6aj2k966-Fc-unsplash.jpg"
     },
     {
-        "name": "MSI Modern",
-        "supplierName": "James bond",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "name": "Mackbook Pro",
+        "supplierName": "Maria christina",
+        "description": "Mackbook pro is most expensive laptop of apple.This laptop quality and build is awesome.",
         "price": 1220,
         "quantity": 15,
-        "img": "https://ibb.co/W0yrZrQ"
+        "img": "https://i.ibb.co/F3DXCG7/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg"
     }
 ]

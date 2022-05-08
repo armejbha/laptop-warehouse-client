@@ -40,9 +40,9 @@ const SocialMedia = () => {
                 <button
                     onClick={() => signInWithGoogle()}
                     className='w-full bg-blue-400 py-2 px-3 mr-2 rounded-sm'>
-                    <div className='flex items-center w-1/2 mx-auto'>
+                    <div className='flex justify-center items-center w-1/2 mx-auto'>
                         <img style={{ width: '25px' }} src={google} alt="" />
-                        <span className='pl-1'>Google</span>
+                        <span className='pl-2'>Google</span>
                     </div>
 
                 </button>

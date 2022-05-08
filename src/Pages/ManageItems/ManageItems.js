@@ -6,11 +6,10 @@ import ManageItemMobile from './ManageItemMobile';
 
 const ManageItems = () => {
     const [items, setItems] = useItems();
-    // const navigate = useNavigate();
     const handleDelete = id => {
         const process = window.confirm('Are you want to delete it');
         if (process) {
-            const url = `http://localhost:5000/items/${id}`;
+            const url = `https://secure-thicket-21886.herokuapp.com/items/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
@@ -22,9 +21,6 @@ const ManageItems = () => {
                 })
         }
     }
-    // const navigateToAddItem = () => {
-    //     navigate('/addItem');
-    // }
     return (
         <div>
             <h1 className='text-4xl font-bold text-center m-16'>My Inventory Items : {items.length}</h1>
@@ -40,7 +36,6 @@ const ManageItems = () => {
                             <th className='border-2 border-black border-solid p-4'>Supplier Name</th>
                             <th className='border-2 border-black border-solid p-4'>Quantity</th>
                             <th className='border-2 border-black border-solid p-4'>Price</th>
-                            {/* <th className='border-2 border-black border-solid p-4'>Stock</th> */}
                             <th className='border-2 border-black border-solid p-4'>Delete</th>
                             <th className='border-2 border-black border-solid p-4'>Update</th>
                         </tr>
