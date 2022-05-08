@@ -16,8 +16,8 @@ const ManageItem = ({ item, handleDelete }) => {
             <th className='border-2 border-black border-solid p-4'>{supplierName}</th>
             <th className='border-2 border-black border-solid p-4'>{quantity}</th>
             <th className='border-2 border-black border-solid p-4'>${price}</th>
-            <th className='border-2 border-black border-solid p-4'><button onClick={() => handleDelete(_id)} className='bg-red-500 p-2 rounded-lg text-white font-bold'>Delete</button></th>
-            <th className='border-2 border-black border-solid p-4'><button onClick={() => inventoryDetails(_id)} className='bg-red-500 p-2 rounded-lg text-white font-bold'>Update</button></th>
+            <th className='border-2 border-black border-solid p-4'><button onClick={() => handleDelete(_id)} className='bg-red-400 p-2 rounded-lg text-white font-bold'>Delete</button></th>
+            <th className='border-2 border-black border-solid p-4'><button onClick={() => inventoryDetails(_id)} className='bg-red-400 p-2 rounded-lg text-white font-bold'>Update</button></th>
         </tr>
     );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
 import google from '../../../images/social/google.png';
-// import github from '../../../images/social/github.png';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -9,7 +8,6 @@ import axios from 'axios';
 
 const SocialMedia = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    // const [signInWithGithub, userOne, loadingOne, errorOne] = useSignInWithGithub(auth);
     const location = useLocation();
     const navigate = useNavigate();
     let from = location.state?.from?.pathname || "/";
@@ -44,17 +42,7 @@ const SocialMedia = () => {
                         <img style={{ width: '25px' }} src={google} alt="" />
                         <span className='pl-2'>Google</span>
                     </div>
-
                 </button>
-                {/* <button
-                    onClick={() => signInWithGithub()}
-                    className='w-full bg-gray-700 py-2 px-3 rounded-sm'>
-                    <div className='flex items-center w-1/2 mx-auto'>
-                        <img style={{ width: '25px' }} src={github} alt="" />
-                        <span className='pl-1 text-white'>Github</span>
-                    </div>
-
-                </button> */}
             </div >
         </div >
     );

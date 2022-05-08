@@ -1,13 +1,12 @@
 
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-// import useItemsDetails from '../../Hook/useItemsDetails';
 
 const ItemDetails = () => {
     const { id } = useParams();
     const [modifiedCount, setModifiedCount] = useState('');
     const [item, setItem] = useState({});
-    const url = `http://localhost:5000/items/${id}`;
+    const url = `https://secure-thicket-21886.herokuapp.com/items/${id}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -26,7 +25,7 @@ const ItemDetails = () => {
         let newCount = '';
         setModifiedCount(newCount);
         const add = { quantity };
-        const url = `http://localhost:5000/items/${id}`
+        const url = `https://secure-thicket-21886.herokuapp.com/items/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -51,7 +50,7 @@ const ItemDetails = () => {
         let newCount = '';
         setModifiedCount(newCount);
         const add = { quantity };
-        const url = `http://localhost:5000/items/${id}`
+        const url = `https://secure-thicket-21886.herokuapp.com/items/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {

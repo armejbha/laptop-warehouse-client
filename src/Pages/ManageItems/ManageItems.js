@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import useItems from '../../Hook/useItems';
 import ManageItem from './ManageItem';
 import ManageItemMobile from './ManageItemMobile';
@@ -24,7 +24,7 @@ const ManageItems = () => {
     return (
         <div>
             <h1 className='text-4xl font-bold text-center m-16'>My Inventory Items : {items.length}</h1>
-            <Link className='bg-orange-400 block m-auto p-2 w-44 rounded-lg text-center font-bold mb-4' to='/additem'>Add Item</Link>
+            <Link className='bg-red-400 block m-auto p-2 w-44 rounded-lg text-center font-bold mb-4' to='/additem'>Add Item</Link>
             <div className='md:flex justify-center hidden'>
                 <table className='border-2 border-black border-solid m-4'>
                     <thead>

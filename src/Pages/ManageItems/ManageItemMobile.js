@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ManageItemMobile = ({ item, handleDelete }) => {
-    const { _id, name, description, supplierName, img, price, quantity, stock } = item;
+    const { _id, name, description, supplierName, img, price, quantity } = item;
     return (
         <div className='block md:hidden w-full p-4 mt-8 hover:bg-slate-300 duration-500 ease-in'>
             <div className='w-full p-4'>
@@ -17,7 +17,7 @@ const ManageItemMobile = ({ item, handleDelete }) => {
                         <p className='text-lg font-semibold'>Quantity:{quantity}</p>
                     </div>
                 </div>
-                <button onClick={() => handleDelete(_id)} className='bg-orange-300 p-2 w-1/4 block m-auto mt-8 rounded-lg font-bold'>Delete</button>
+                <button onClick={() => handleDelete(_id)} className='bg-red-400 p-2 w-1/4 block m-auto mt-8 rounded-lg font-bold'>Delete</button>
             </div>
         </div>
     );
